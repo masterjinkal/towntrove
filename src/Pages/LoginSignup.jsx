@@ -22,7 +22,7 @@ export const LoginSignup = () => {
 
     let responseData;
     //use fetch API
-    await fetch('https://react-app-api.onrender.com/login', {
+    await fetch('https://towntrove-api.onrender.com/login', {
       method: 'POST',
       headers: {
         Accept: 'application/form-data',
@@ -49,7 +49,7 @@ export const LoginSignup = () => {
     console.log("Sign Up function executed", formData);
     let responseData;
     //use fetch API
-    await fetch('https://react-app-api.onrender.com/signup', {
+    await fetch('https://towntrove-api.onrender.com/signup', {
       method: 'POST',
       headers: {
         Accept: 'application/form-data',

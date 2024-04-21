@@ -10,7 +10,7 @@ const NewCollections = () => {
   const [new_collection, setNew_Collection] = useState([]);
 
   useEffect(() => {
-    fetch('https://react-app-api.onrender.com/newcollection')
+    fetch('https://towntrove-api.onrender.com/newcollection')
     .then((response) => response.json())
     .then((data) => setNew_Collection(data));
   }, [])

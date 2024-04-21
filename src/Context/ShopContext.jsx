@@ -23,13 +23,13 @@ const ShopContextProvider = (props) => {
     //now we will fetch our all_product data and we will store it in ll_product state varible 
     //we will use useEffect for that 
     useEffect(() => {
-        fetch('https://react-app-api.onrender.com/allproducts')
+        fetch('https://towntrove-api.onrender.com/allproducts')
         .then((response) => response.json())
         .then((data) => setAll_Product(data))
 
         //if auth-token is available, will fetch cart data
         if(localStorage.getItem('auth-token')){
-            fetch('https://react-app-api.onrender.com/getcart', {
+            fetch('https://towntrove-api.onrender.com/getcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -47,7 +47,7 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({...prev, [itemId]:prev[itemId]+1}));
     if(localStorage.getItem('auth-token')){
         //means we are logged in; in that case we will upadte item id in mongodb database in users cart data
-        fetch('https://react-app-api.onrender.com/addtocart', {
+        fetch('https://towntrove-api.onrender.com/addtocart', {
             method: 'POST',
             headers: {
                 Accept: 'application/form-data',
@@ -65,7 +65,7 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({...prev, [itemId]:prev[itemId]-1}));
     
     if(localStorage.getItem('auth-token')){
-        fetch('https://react-app-api.onrender.com/removefromcart', {
+        fetch('https://towntrove-api.onrender.com/removefromcart', {
             method: 'POST',
             headers: {
                 Accept: 'application/form-data',
