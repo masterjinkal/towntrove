@@ -7,7 +7,7 @@ const NewsLetter = () => {
       <h1>Get Exclusive Offers On Your Email</h1>
       <p>Subcribe to our newsletter and stay updated</p>
       <div>
-        <input type = "email" placeholder='Your Email Id' />
+        <input type = "email" placeholder='Your Email Id'  name = 'email' id='email'  autoComplete="email"/>
         <button>Suscribe</button>
       </div>
     </div>
