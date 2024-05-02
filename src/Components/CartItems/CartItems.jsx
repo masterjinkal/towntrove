@@ -18,6 +18,7 @@ export const CartItems = () => {
             <p>Quantity</p>
             <p>Total</p>
             <p>Remove</p>
+            <p>Add</p>
         </div>
         <hr />
         {all_product.map((e) => {
