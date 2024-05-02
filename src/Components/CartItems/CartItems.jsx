@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import './CartItems.css'
 import remove_icon from '../Assets/cart_cross_icon.png'
-import add_icon from '../Assets/add_icon.jpg'
+import add_icon from '../Assets/add_icon.png'
 
 export const CartItems = () => {
 
