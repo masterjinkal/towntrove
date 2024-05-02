@@ -3,10 +3,11 @@ import { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import './CartItems.css'
 import remove_icon from '../Assets/cart_cross_icon.png'
+import add_icon from '../Assets/add_icon.jpg'
 
 export const CartItems = () => {
 
-    const {getTotalCartAmount, all_product, cartItems, removeFromCart} = useContext(ShopContext);
+    const {getTotalCartAmount, all_product, cartItems, removeFromCart, addToCart} = useContext(ShopContext);
 
   return (
     <div className = "cartitems">
@@ -30,6 +31,7 @@ export const CartItems = () => {
                     <button className='cartitems-quantity'>{cartItems[e.id]}</button>
                     <p>${e.new_price * cartItems[e.id]}</p>
                     <img className='cartitems-remove-icon' src={remove_icon} onClick = {() => removeFromCart(e.id)} alt="" />
+                    <img className='cartitems-add-icon' src={add_icon} onClick={() => addToCart(e.id)} alt="" /> {/* New Add Icon */}
                 </div>
                 <hr />
             </div>

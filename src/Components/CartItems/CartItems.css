@@ -34,6 +34,12 @@
     cursor: pointer;
 }
 
+.cartitems-add-icon{
+    width: 15px;
+    margin: 0px 40px;
+    cursor: pointer;
+}
+
 .cartitems-quantity{
     width: 64px;
     height: 50px;
@@ -122,6 +128,9 @@
         height: 50px;
     }
     .cartitems-remove-icon{
+        margin: auto;
+    }
+    .cartitems-add-icon{
         margin: auto;
     }
     .cartitems-quantity{
